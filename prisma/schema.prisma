@@ -1,0 +1,20 @@
+export type PipelineStage = "new" | "contacted" | "proposal" | "negotiation" | "won" | "lost";
+
+export type Deal = {
+  id: string;
+  name: string;
+  company: string;
+  value: number;
+  stage: PipelineStage;
+  ownerId: string | null;
+  createdAt: string;
+};
+
+export type Task = {
+  id: string;
+  title: string;
+  dealId: string | null;
+  assigneeId: string | null;
+  dueDate: string | null;
+  completed: boolean;
+};
